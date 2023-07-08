@@ -49,6 +49,18 @@ body {
   overflow: hidden;
 }
 
+.scroll-able::-webkit-scrollbar {
+  width: 5px;
+}
+
+.scroll-able::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scroll-able::-webkit-scrollbar-thumb {
+  background: #2a2a2a;
+}
+
 /* Left content */
 
 .left-content {
@@ -207,17 +219,7 @@ body {
   overflow-y: auto;
 }
 
-.most-played-songs::-webkit-scrollbar {
-  width: 5px;
-}
 
-.most-played-songs::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.most-played-songs::-webkit-scrollbar-thumb {
-  background: #2a2a2a;
-}
 
 .song-item {
   position: relative;
@@ -278,4 +280,106 @@ body {
 .song-item > .info > .artist {
   font-size: 12px;
   color: var(--subtitle-text);
+}
+
+
+/* Right Content */
+
+.suggest-content {
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+  width: 100%;
+  height: 100%;
+  padding: 24px;
+  overflow-y: auto;
+}
+
+.suggest-content > .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.suggest-content > .header > h1 {
+  font-size: 16px;
+  color:var(--title-text);
+  text-transform: capitalize;
+}
+
+.suggest-content > .header > i {
+  display: block;
+  width: 32px;
+  height: 32px;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center;
+  border-radius: 50%;
+  color:var(--icon-color);
+  transition: var(--transition);
+}
+
+.suggest-content > .header > i:hover {
+  background-color: #181818;
+}
+
+.suggest-item > .thumbnail {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.suggest-item > .thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.suggest-item .body {
+  display: flex;
+  justify-content: space-between;
+  gap:5px;
+  margin-top: 16px;
+}
+
+.suggest-item .body .info {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.suggest-item .body .info h2 {
+  font-size: 22px;
+  color: var(--title-text);
+  text-transform: capitalize;
+}
+
+.suggest-item .body .info p {
+  font-size: 14px;
+  text-transform: capitalize;
+  color:var(--subtitle-text);
+}
+
+.suggest-item .action {
+  display: flex;
+  gap: 5px;
+}
+
+.suggest-item .action i {
+  font-size: 20px;
+  line-height: 32px;
+  width: 32px;
+  height: 32px;
+  border-radius:50%;
+  color:var(--icon-color);
+  text-align: center;
+  transition: var(--transition);
+}
+
+.suggest-item .action i:hover {
+  color:var(--title-text);
+  background-color: #181818;
 }
