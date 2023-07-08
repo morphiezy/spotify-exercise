@@ -5,6 +5,111 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Spotify Exercise</title>
     <link rel="stylesheet" href="./style.css" />
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Remix Icon -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
   </head>
-  <body></body>
+  <body>
+    <main id="app">
+      <!-- Left content section -->
+
+      <section aria-label="most-played" class="left-content">
+        <div class="main-navigation spotify-card">
+          <div class="navigation-item disable active">
+            <i class="ri-home-5-fill"></i>
+            <p>Home</p>
+          </div>
+          <div class="navigation-item disable">
+            <i class="ri-search-line"></i>
+            <p>Search</p>
+          </div>
+        </div>
+        <div class="most-played spotify-card">
+          <div class="most-played-header">
+            <div class="card-title">
+              <i class="ri-building-2-fill"></i>
+              <p>Most Played</p>
+            </div>
+            <div class="action disable">
+              <i class="ri-add-line"></i>
+              <i class="ri-arrow-right-line"></i>
+            </div>
+          </div>
+          <div class="most-played-category">
+            <div class="next-category disable">
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div class="category-wrapper disable">
+              <p>Playlists</p>
+              <p>Artists</p>
+              <p>Albums</p>
+              <p>Podcasts & Shows</p>
+            </div>
+          </div>
+          <div class="most-played-songs">
+            <div class="song-item">
+              <div class="thumbnail">
+                <img
+                  src="https://i.scdn.co/image/ab67616d000048512bf0876d42b90a8852ad6244"
+                />
+              </div>
+              <div class="info">
+                <p class="song-name line-clamp-1">until i found you</p>
+                <p class="artist line-clamp-1">stephen sachez</p>
+              </div>
+            </div>
+            <div class="song-item playing">
+              <i class="ri-volume-up-fill"></i>
+              <div class="thumbnail">
+                <img
+                  src="https://i.scdn.co/image/ab67616d00004851786e4e2c43c2897fafabbfb6"
+                />
+              </div>
+              <div class="info">
+                <p class="song-name line-clamp-1">in the stars</p>
+                <p class="artist line-clamp-1">benson boone</p>
+              </div>
+            </div>
+            <div class="song-item">
+              <div class="thumbnail">
+                <img
+                  src="https://i.scdn.co/image/ab67616d0000485150dba34377a595e35f81b0e4"
+                />
+              </div>
+              <div class="info">
+                <p class="song-name line-clamp-1">easy on me</p>
+                <p class="artist line-clamp-1">adele</p>
+              </div>
+            </div>
+            <div class="song-item">
+              <div class="thumbnail">
+                <img
+                  src="https://i.scdn.co/image/ab67616d00004851bfedccaca3c8425fdc0a7c73"
+                />
+              </div>
+              <div class="info">
+                <p class="song-name line-clamp-1">how do i say goodbye</p>
+                <p class="artist line-clamp-1">dean lewis</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Lyrics screen -->
+      <section aria-label="lyrics-screen"></section>
+
+      <!-- recommendation-song -->
+      <section aria-label="recommendation-song"></section>
+    </main>
+  </body>
 </html>
