@@ -26,7 +26,7 @@ body {
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: minmax(280px,360px) 1fr minmax(280px,360px);
+  grid-template-columns: minmax(280px, 360px) 1fr minmax(280px, 360px);
   grid-auto-rows: 100%;
   gap: 0.6rem;
   padding: 0.6rem;
@@ -37,6 +37,7 @@ body {
   height: fit-content;
   border-radius: 8px;
   background-color: var(--dark-gray);
+  overflow: hidden;
 }
 
 .disable:hover {
@@ -219,8 +220,6 @@ body {
   overflow-y: auto;
 }
 
-
-
 .song-item {
   position: relative;
   display: flex;
@@ -282,13 +281,45 @@ body {
   color: var(--subtitle-text);
 }
 
+/* Center Content */
+
+.lyrics-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.lyrics-wrapper .screen {
+  width: 100%;
+  height: 100%;
+  background-color: #757575;
+  color: white;
+  padding: 100px 120px;
+  overflow-y: auto;
+}
+
+.lyrics-wrapper .screen p {
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 50px;
+  margin-bottom: 16px;
+}
+
+.lyrics-wrapper .screen span {
+  display: block;
+  margin-top: 40px;
+  font-size: 12px;
+  font-style: italic;
+}
 
 /* Right Content */
 
 .suggest-content {
   display: flex;
   flex-direction: column;
-  gap:20px;
+  gap: 20px;
   width: 100%;
   height: 100%;
   padding: 24px;
@@ -303,7 +334,7 @@ body {
 
 .suggest-content > .header > h1 {
   font-size: 16px;
-  color:var(--title-text);
+  color: var(--title-text);
   text-transform: capitalize;
 }
 
@@ -315,7 +346,7 @@ body {
   line-height: 32px;
   text-align: center;
   border-radius: 50%;
-  color:var(--icon-color);
+  color: var(--icon-color);
   transition: var(--transition);
 }
 
@@ -339,7 +370,7 @@ body {
 .suggest-item .body {
   display: flex;
   justify-content: space-between;
-  gap:5px;
+  gap: 5px;
   margin-top: 16px;
 }
 
@@ -360,7 +391,7 @@ body {
 .suggest-item .body .info p {
   font-size: 14px;
   text-transform: capitalize;
-  color:var(--subtitle-text);
+  color: var(--subtitle-text);
 }
 
 .suggest-item .action {
@@ -373,13 +404,33 @@ body {
   line-height: 32px;
   width: 32px;
   height: 32px;
-  border-radius:50%;
-  color:var(--icon-color);
+  border-radius: 50%;
+  color: var(--icon-color);
   text-align: center;
   transition: var(--transition);
 }
 
 .suggest-item .action i:hover {
-  color:var(--title-text);
+  color: var(--title-text);
   background-color: #181818;
+}
+
+@media screen and (max-width: 1024px) {
+  #app {
+    display: block;
+  }
+
+  #app > * {
+    display: none;
+  }
+
+  #app::before {
+    content: "require 1024px display to access :)";
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    color: var(--title-text);
+  }
 }
